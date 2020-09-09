@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>survey-page</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Super Hero Survey Page</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 id="title" class="text-center">Tell Me About Your Favorite Super Hero</h1>
+                <p id="description" class="description text-center"> Who's your favorite hero and why</p>
+            </header>
+
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="name" id="name-label">Name:</label> <input type="text" name="name" id="name" class="form-control" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="email-label">Email:</label> <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="number" id="number-label">Age:<span class="clue">(optional)</span></label> <input type="number" name="age" id="number" min="0" max="99" class="form-control" placeholder="Age" required>
+                </div>
+
+                <div class="form-group">
+                    <p>Choose a Weapon:</p>
+                    <select id="dropdown" name="weapons" class="form-control" required>
+                        <option disabled selected value>Choose a Weapon</option>
+                        <option value="guns">Guns</option>
+                        <option value="hands">Hands</option>
+                        <option value="swords">Swords</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <p>Gender:</p>
+                    <label><input type="radio" name="gender" value="male" class="input-radio">Male</label>
+                    <label><input type="radio" name="gender" value="female" class="input-radio">Female</label>
+                    <label><input type="radio" name="gender" value="other" class="input-radio">Others</label>
+                </div>
+
+                <div class="form-group">
+                    <p>
+                      Whats Your Favorite Trait In A Super Hero
+                    </p>
+                    <select id="most-like" name="mostLike" class="form-control" required>
+                      <option disabled selected value>Select a Trait</option>
+                      <option value="confidence">Confidence</option>
+                      <option value="humility">Humility</option>
+                      <option value="sense of humor">Sense of Humor</option>
+                      <option value="intelligence">Intelligence</option>
+                    </select>
+                  </div>
+
+                <div class="form-group">
+                    <p>Which Universe is Your Favorite?<span class="clue">(Check all that apply)</span></p>
+
+                    <label><input type="checkbox" class="input-checkbox" name="universe1" value="Marvel">Marvel</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe2" value="DC">DC</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe3" value="kirbyverse">Kirbyverse</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe4" value="ultraverse">Ultraverse</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe5" value="valiant universe">Valiant Universe</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe6" value="project superpowers">Project Superpowers</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe7" value="red circle">Red Circle</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe8" value="irredeemable">Irredeemable</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe8" value="dakotaverse">Dakotaverse</label>
+                    <label><input type="checkbox" class="input-checkbox" name="universe10" value="Other">Other</label>
+                </div>
+                
+                <div class="form-group">
+                    <p>Any Additional Comments or Suggestions?</p>
+                    <textarea id="comments" name="comments" class="input-textarea" placeholder="Additional Comments"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
